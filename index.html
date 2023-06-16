@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <main class="container-fluid">
+    <form class="form" id="form-newsletter" novalidate>
+      <div class="form__info">
+        <h1 class="form__title">Stay updated!</h1>
+        <p class="form__description">Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <ul class="form__list">
+          <li class="form__item">
+            Product discovery and building what matters
+          </li>
+          <li class="form__item">
+            Measuring to ensure updates are a success
+          </li>
+          <li class="form__item">
+            And much more!
+          </li>
+        </ul>
+
+        <div class="form__group">
+          <label for="email-newsletter" class="form__label text-bold">Email address</label>
+          <input type="email" class="form__control" placeholder="email@company.com" name="email-newsletter">
+          <p class="form__error text-bold">Valid email required</p>
+        </div>
+
+        <button class="form__button" type="submit">
+          <span class="form__button__text">
+            Subscribe to monthly newsletter
+          </span>
+          <span class="spinner spinner--hidden">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> 
+              <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> 
+              <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <picture class="picture">
+        <source class="form__image" media="(max-width: 768px)" srcset="./assets/images/illustration-sign-up-mobile.png" />
+        <img class="form__image" src="./assets/images/illustration-sign-up-desktop.png" />
+      </picture>
+    </form>
+    <div class="form form-success d-none" id="form-success">
+      <div class="form-success__body">
+        <img src="./assets/images/icon-success.svg" alt="icon success" class="form__icon">
+
+        <h2 class="form__title">Thanks for subscribing!</h2>
+        <p class="form__description">
+          A confirmation email has been sent to <span class="text-bold" id="subscribed-email">ash@hotmail.com</span>.
+          Please open it and click the button inside to confirm your subscription.
+        </p>  
+      </div>
+      <button class="form__button dismiss-button" id="dismiss-btn">
+        Dismiss message
+      </button>
+    </div>
+  </main>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+.text-bold{ font-weight: 700; }
+.d-none{ display: none; }
+
+.aspect-ratio-16-9{ aspect-ratio: 16 / 9; }
+.aspect-ratio-1-1{ aspect-ratio: 1 / 1; }
+
+.fade{
+    opacity: 0;
+    transition: opacity ease .5s;
+}
